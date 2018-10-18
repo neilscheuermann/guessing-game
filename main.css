@@ -1,1 +1,58 @@
-/* Write your CSS code in this file */
+body {
+  background-image: url(http://www.hdwallpaperspulse.com/wp-content/uploads/2016/03/10/abstract-free-background-hd.jpeg);
+  text-align: center;
+}
+
+header {
+  color: whitesmoke;
+}
+
+#fullstack-photo-left {
+  width: 200px;
+  float: left;
+}
+
+#fullstack-photo-right {
+  width: 200px;
+  float: right;
+  /* padding: 5px; */
+}
+
+#number-guess {
+  width: 100px;
+  height: 100px;
+  border: black solid 2px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: lightyellow;
+  font-size: 50px;
+}
+
+#main {
+  color: whitesmoke;
+}
+
+#bottom-buttons {
+  padding: 10px;
+}
+
+.guesses {
+  padding: 10px;
+  border: black solid 2px;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: white;
+  color: black;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  border: solid black 2px;
+}
+
+
