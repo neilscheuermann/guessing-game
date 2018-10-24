@@ -9,57 +9,38 @@
   </head>
 
   <body>
-    <!-- PROJECT REQUIREMENTS:
-    A header
-    2-4 Buttons
-    1 Input Field and submit button
-    A list of previous guesses
-    A fun design! (this is optional)
-    A new Github Repository for the Guessing Game -->
-    <header>
+    <div id="bodyDiv">
+      <header>
+        <h1 id="header">GUESSING GAME</h1>
+      </header>
 
-      <h1>Play the Guessing Game!</h1>
-
-    </header>
-
-    <main id="main">
-
-      <p>How to play: Guess a number between 1 and 100. (Insert more rules here)</p>
-
-      <input id="number-guess" placeholder="#">
-      <p><button type="submit">Submit</button></p>
-
-
-      <h2>Previous Guesses</h2>
-
-        <p>
-          <span class="guesses">_</span>
-          <span class="guesses">_</span>
-          <span class="guesses">_</span>
-          <span class="guesses">_</span>
-          <span class="guesses">_</span>
+      <main id="main">
+        <h2 id="sub-header">Guess a number between 1 and 100.</h2>
+        <input id="input" placeholder="#">
+        <p><button id="submit-btn" type="submit">Submit</button></p>
+        <h3 id="hint">Guesses</h3>
+          <p>
+            <span id="guess1" class="guesses">_</span>
+            <span id="guess2" class="guesses">_</span>
+            <span id="guess3" class="guesses">_</span>
+            <span id="guess4" class="guesses">_</span>
+            <span id="guess5" class="guesses">_</span>
+          </p>
+        <p id="bottom-buttons">
+          <button id="reset-btn" type="button">Reset</button>
+          <button id="hint-btn" type="button">Hint</button>
         </p>
+        <p></p>
+      </main>
 
-      <p id="bottom-buttons">
-        <button type="button">Play Again</button>
-        <button type="button">Hint</button>
-      </p>
+      <footer id="footer">
+        <img src="pictures/fullstack-academy-logo-color-on-white.png" alt="Fullstack Academy Logo" id="fullstack-photo">
+        <span>Project by Neil Scheuermann</span>
+        <img src="pictures/grace-hopper.jpeg" alt="Fullstack Academy Logo" id="grace-hopper-photo">
+      </footer>
 
-    </main>
-
-    <footer class="footer">
-      <img src="pictures/fullstack-academy-logo-color-on-white.png" alt="Fullstack Academy Logo" id="fullstack-photo-left">
-      <span>Project by Neil Scheuermann</span>
-      <img src="pictures/fullstack-academy-logo-color-on-white.png" alt="Fullstack Academy Logo" id="fullstack-photo-right">
-
-    </footer>
-
-
-
-
-
-    <!-- <script src='js/guessing-game.js'></script> -->
-    <!-- uncomment the script tag above when you are ready to add JavaScript to your document -->
+      <script src='js/guessing-game.js'></script>
+    </div>
   </body>
 
 </html>

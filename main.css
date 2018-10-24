@@ -1,39 +1,35 @@
+/* Element Selectors */
+
+/* ---- Layout ------------------- */
+
 body {
-  background-image: url(http://www.hdwallpaperspulse.com/wp-content/uploads/2016/03/10/abstract-free-background-hd.jpeg);
+  /* background-color: lightgray; */
+  background: linear-gradient(0deg, white, gray);
   text-align: center;
+  line-height: 1.5;
+  margin-bottom: 100px;
 }
 
 header {
-  color: whitesmoke;
+  margin-top: 30px;
 }
 
-#fullstack-photo-left {
-  width: 200px;
-  float: left;
-}
 
-#fullstack-photo-right {
-  width: 200px;
-  float: right;
-  /* padding: 5px; */
-}
-
-#number-guess {
-  width: 100px;
-  height: 100px;
-  border: black solid 2px;
-  border-radius: 50%;
-  text-align: center;
-  background-color: lightyellow;
-  font-size: 50px;
-}
-
-#main {
-  color: whitesmoke;
-}
-
-#bottom-buttons {
-  padding: 10px;
+#bodyDiv {
+  color: white;
+  border: 5px solid white;
+  border-radius: 15%;
+  width: 90%;
+  max-width: 550px;
+  margin: auto;
+  margin-top: 50px;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  background:
+              radial-gradient(circle, transparent, white 250%),
+              url(http://www.hdwallpaperspulse.com/wp-content/uploads/2016/03/10/black-free-background.png);
+  text-shadow: 4px 4px 4px #000;
+  box-shadow: inset 5px 5px 30px rgba(0, 0, 0, 1), 5px 5px 30px rgba(0, 0, 0, 1);
 }
 
 .guesses {
@@ -43,16 +39,77 @@ header {
   margin: 10px;
   background-color: white;
   color: black;
+  text-shadow: none;
 }
 
-.footer {
+/* ---- Button and Input Styling ------------------- */
+
+#input:focus {
+  /* background: lightgoldenrodyellow; */
+  border: 3px solid;
+  box-sizing: border-box;
+}
+
+#input {
+  width: 100px;
+  height: 100px;
+  border: black solid 2px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: white;
+  font-size: 50px;
+  box-sizing: border-box;
+}
+
+#input,
+.guesses {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+}
+
+button {
+  background-color: white;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+button:hover:enabled {
+  background-color: darkslategray;
+  color: white;
+  border-radius: 4px;
+}
+
+#bottom-buttons {
+  padding: 10px;
+}
+
+/* ---- Footer Style ------------------- */
+
+#fullstack-photo {
+  width: 200px;
+  float: left;
+  position: relative;
+  margin-left: 15px;
+}
+
+#grace-hopper-photo {
+  width: 200px;
+  float: right;
+  position: relative;
+  margin-right: 15px;
+  /* padding: 5px; */
+}
+
+#footer {
+  color: black;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: white;
   text-align: center;
-  border: solid black 2px;
+  border-top: solid black 2px;
+  text-shadow: none;
 }
-
-
