@@ -49,7 +49,7 @@ class Game {
       this.hasWon = true;
       return `You Win! The number was ${this.winningNumber}.`;
     }
-    if (this.pastGuesses.length >= 5) return `You Lose.`;
+    if (this.pastGuesses.length >= 5) return `You Lose. The number was ${this.winningNumber}.`;
     if (this.difference() < 5) return `You're burning up!!! (within 5)`;
     if (this.difference() < 10) return `You're hot! (within 10)`;
     if (this.difference() < 25) return `You're warm. (within 25)`;
@@ -107,8 +107,8 @@ const submitGuess = () => {
   if (currentGame.pastGuesses[4]) guess5.innerHTML = currentGame.pastGuesses[4];
 
   //Sets the sub-header message after each guess.
-  if (header.innerHTML.includes('You Win!')) subHeader.innerHTML = `RESET to play again`;
-  else if (header.innerHTML === `You Lose.`) subHeader.innerHTML = `The number was ${currentGame.winningNumber}`;
+  if (header.innerHTML.includes('You Win!') || header.innerHTML.includes('You Lose')) subHeader.innerHTML = `RESET to play again`;
+  // else if (header.innerHTML === `You Lose.`) subHeader.innerHTML = `The number was ${currentGame.winningNumber}`;
   else if (header.innerHTML === 'You already guessed that number.' || header.innerHTML === 'That is an invalid guess.') subHeader.innerHTML = `Guess a number between 1 and 100.`;
   else if (currentGame.isLower()) subHeader.innerHTML = `Guess higher.`;
   else if (!currentGame.isLower()) subHeader.innerHTML = `Guess lower.`;
@@ -144,7 +144,7 @@ resetButton.addEventListener('click', function() {
   }
 
   submitButton.disabled = false;
-  hintButton.disabled = false;
+  input.disabled = false;
 
   hint.innerHTML = 'Guesses';
 
