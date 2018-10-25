@@ -116,7 +116,7 @@ const submitGuess = () => {
   //Disable the submit and hint button after winning or losing.
   if (currentGame.hasWon || currentGame.pastGuesses.length >= 5) {
     submitButton.disabled = true;
-    hintButton.disabled = true;
+    input.disabled = true;
   }
 };
 
@@ -125,6 +125,7 @@ submitButton.addEventListener('click', submitGuess);
 
 //Runs submitGuess() each time enter is pushed after entering info into the number-guess box.
 input.addEventListener('keyup', function(event) {
+  if (currentGame.hasWon || currentGame.pastGuesses.length >= 5) return;
   if (event.keyCode === 13) submitGuess();
 });
 

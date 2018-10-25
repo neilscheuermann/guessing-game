@@ -42,6 +42,10 @@ header {
   text-shadow: none;
 }
 
+#hint {
+  font-size: 1.25em;
+}
+
 /* ---- Button and Input Styling ------------------- */
 
 #input:focus {
@@ -71,10 +75,12 @@ button {
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
   border: 1px solid black;
   border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: bold;
 }
 
 button:hover:enabled {
-  background-color: darkslategray;
+  background-color: rgb(12, 61, 94);
   color: white;
   border-radius: 4px;
 }
